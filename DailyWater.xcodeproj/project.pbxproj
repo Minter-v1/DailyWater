@@ -11,8 +11,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D3D4FF42E1B80A100CA1C2A /* DailyWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DailyWater.app; path = "/Users/minji/Desktop/WorkSpace/DailyWater/build/Debug-iphoneos/DailyWater.app"; sourceTree = "<absolute>"; };
 		3D3D50052E1B80C600CA1C2A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3DC37E562E1D6A8A00CD4393 /* DailyWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +39,7 @@
 			children = (
 				3D3D4FF62E1B80A100CA1C2A /* DailyWater */,
 				3D3D50052E1B80C600CA1C2A /* .gitignore */,
+				3DC37E562E1D6A8A00CD4393 /* DailyWater.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,7 +65,7 @@
 			packageProductDependencies = (
 			);
 			productName = DailyWater;
-			productReference = 3D3D4FF42E1B80A100CA1C2A /* DailyWater.app */;
+			productReference = 3DC37E562E1D6A8A00CD4393 /* DailyWater.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

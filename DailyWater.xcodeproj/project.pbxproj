@@ -21,6 +21,11 @@
 			path = DailyWater;
 			sourceTree = "<group>";
 		};
+		3D441E1C2E1ED0D500EEDCA1 /* Preview */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Preview;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 		3D3D4FEB2E1B80A100CA1C2A = {
 			isa = PBXGroup;
 			children = (
+				3D441E1C2E1ED0D500EEDCA1 /* Preview */,
 				3D3D4FF62E1B80A100CA1C2A /* DailyWater */,
 				3D3D50052E1B80C600CA1C2A /* .gitignore */,
 				3DC37E562E1D6A8A00CD4393 /* DailyWater.app */,
@@ -60,6 +66,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				3D3D4FF62E1B80A100CA1C2A /* DailyWater */,
+				3D441E1C2E1ED0D500EEDCA1 /* Preview */,
 			);
 			name = DailyWater;
 			packageProductDependencies = (

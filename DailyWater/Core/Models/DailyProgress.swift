@@ -7,7 +7,7 @@
 
 import Foundation
 
-// TODO: - 진행률 계산 및 시각화 데이터 구현
+
 struct DailyProgress: Identifiable, Equatable {
     let id: UUID
     let date: Date
@@ -32,7 +32,7 @@ struct DailyProgress: Identifiable, Equatable {
 }
 
 
-// MARK: - 진행률 처리
+// MARK: - 진행률 처리(computed property)
 extension DailyProgress {
     
     // MARK: - 진행률 계산(%)
@@ -65,6 +65,7 @@ extension DailyProgress {
 // MARK: - method
 extension DailyProgress {
     
+    // 당일 섭취량
     static func today(record: [WaterRecord], goalAmount: Double) -> DailyProgress {
         let today = Date() // 오늘 날짜
         let todayRecord = record.filter { Calendar.current.isDate($0.timestamp, inSameDayAs: today)} // 오늘 기록들
@@ -78,4 +79,36 @@ extension DailyProgress {
         )
     }
     
+    // 특정 일 섭취량
+    static func specific(_ date: Date, record: [WaterRecord], goalAmount: Double) -> DailyProgress {
+        let dayRecord = record.filter { Calendar.current.isDate( $0.timestamp, inSameDayAs: date)}
+        let totalAmount = dayRecord.reduce(0) { $0 + $1.amount}
+        
+        
+        return DailyProgress(date: date, actualAmount: totalAmount, goalAmount: goalAmount, records: dayRecord)
+    }
+    
+}
+
+
+// MARK: - sample data
+extension DailyProgress {
+    
+    static var sampleDate: [DailyProgress] {
+        let calendar: Calendar = Calendar.current
+        let today = Date()
+        
+        return [
+            DailyProgress(date: today, actualAmount: 1000, goalAmount: 2000), // 오늘
+            DailyProgress(
+                date: calendar.date(byAdding: .day, value:  -1, to: today) ?? today,
+                actualAmount: 1000,
+                goalAmount: 3000), // 하루 전
+            DailyProgress(
+                date: calendar.date(byAdding: .day, value: -2, to: today) ?? today, // 이틀 전
+                actualAmount: 1000,
+                goalAmount: 4000),
+            
+        ]
+    }
 }

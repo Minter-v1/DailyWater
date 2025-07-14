@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 // TODO: - 사용자 설정 데이터 모델 구현
 struct UserSetting: Codable, Equatable {

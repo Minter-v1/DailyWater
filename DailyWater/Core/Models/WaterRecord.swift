@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 // MARK: - 물 섭취 기록 생성자
